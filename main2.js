@@ -60,8 +60,8 @@ listHoa.forEach(function (hoa) {
                 <img src = '${hoa.hinhAnh}' alt = '${hoa.hinhAnh}' />
             </td>
             <td>
-                <a href = '#' title = 'Sửa'>Sửa<img src = 'images/pencil.gif' alt = 'images/pencil.gif'>
-                <a href = '#' title = 'Xóa'>Xóa<img src = 'images/bin.gif' alt = 'images/bin.gif'>
+                <a href = '#' title = 'Sửa'><img src = 'images/pencil.gif' alt = 'images/pencil.gif'>Sửa</a>
+                <a href = '#' title = 'Xóa'><img src = 'images/bin.gif' alt = 'images/bin.gif'>Xóa</a>
             </td>
         </tr>
         `;
