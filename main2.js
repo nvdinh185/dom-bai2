@@ -54,7 +54,7 @@ listHoa.forEach(function (hoa) {
     htmlsContents += `
         <tr>
             <td>${hoa.id}</td>
-            <td>${hoa.tenHoa}</td>
+            <td><a href="#" title="Hoa Violet">${hoa.tenHoa}</a></td>
             <td>${hoa.loaiHoa}</td>
             <td>
                 <img src = '${hoa.hinhAnh}' alt = '${hoa.hinhAnh}' />
