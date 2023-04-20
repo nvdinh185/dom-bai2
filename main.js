@@ -49,20 +49,22 @@ const listHoa = [
 ]
 
 // Nội dung
-var htmlsContents = listHoa.map(function (hoa) {
-    return (
-        `<tr>
-            <td>${hoa.id}</td>
-            <td><a href="#" title="${hoa.tenHoa}">${hoa.tenHoa}</a></td>
-            <td>${hoa.loaiHoa}</td>
-            <td>
-                <img src = '${hoa.hinhAnh}' alt = '${hoa.hinhAnh}' />
-            </td>
-            <td>
-                <a href = '#' title = 'Sửa'><img src = 'images/pencil.gif' alt = 'images/pencil.gif'>Sửa</a>
-                <a href = '#' title = 'Xóa'><img src = 'images/bin.gif' alt = 'images/bin.gif'>Xóa</a>
-            </td>
-        </tr>`);
-})
+
+var htmlsContents = '';
+for (const hoa of listHoa) {
+    htmlsContents += `
+    <tr>
+        <td>${hoa.id}</td>
+        <td><a href="#" title="${hoa.tenHoa}">${hoa.tenHoa}</a></td>
+        <td>${hoa.loaiHoa}</td>
+        <td>
+            <img src = '${hoa.hinhAnh}' alt = '${hoa.hinhAnh}' />
+        </td>
+        <td>
+            <a href = '#' title = 'Sửa'><img src = 'images/pencil.gif' alt = 'images/pencil.gif'>Sửa</a>
+            <a href = '#' title = 'Xóa'><img src = 'images/bin.gif' alt = 'images/bin.gif'>Xóa</a>
+        </td>
+    </tr>`;
+}
 
 tbElement.innerHTML += '<tbody>' + htmlsContents + '</tbody>';
