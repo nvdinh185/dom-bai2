@@ -33,32 +33,28 @@ const listHoa = [
 
 const tbElement = document.querySelector('#tbl');
 
+var trElement = document.createElement('tr');
 // Tiêu đề
 const htmlsTitle = `
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Tên hoa</th>
-            <th>Loại hoa</th>
-            <th>Hình ảnh</th>
-        </tr>
-    </thead>
+        <th>ID</th>
+        <th>Tên hoa</th>
+        <th>Loại hoa</th>
+        <th>Hình ảnh</th>
     `;
 
-tbElement.innerHTML = htmlsTitle;
+trElement.innerHTML = htmlsTitle;
+tbElement.appendChild(trElement);
 
 // Nội dung
-var htmlsContents = '';
 for (const hoa of listHoa) {
-    htmlsContents += `
-    <tr>
+    var tr2Element = document.createElement('tr');
+    var htmlsContents = `
         <td>${hoa.id}</td>
         <td><a href="#" title="${hoa.tenHoa}">${hoa.tenHoa}</a></td>
         <td>${hoa.loaiHoa}</td>
         <td>
             <img src = '${hoa.hinhAnh}' alt = '${hoa.hinhAnh}' />
-        </td>
-    </tr>`;
+        </td>`;
+    tr2Element.innerHTML = htmlsContents;
+    tbElement.appendChild(tr2Element);
 }
-
-tbElement.innerHTML += '<tbody>' + htmlsContents + '</tbody>';
