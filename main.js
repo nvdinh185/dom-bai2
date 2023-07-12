@@ -31,9 +31,13 @@ const listHoa = [
     }
 ]
 
-const tbElement = document.querySelector('#tbl');
+var h3Element = $('h3');
 
-var trElement = document.createElement('tr');
+h3Element.text('Danh sách sản phẩm');
+
+const tbElement = $('#tbl');
+
+var trElement = $('<tr>');
 // Tiêu đề
 const htmlsTitle = `
         <th>ID</th>
@@ -42,12 +46,12 @@ const htmlsTitle = `
         <th>Hình ảnh</th>
     `;
 
-trElement.innerHTML = htmlsTitle;
-tbElement.appendChild(trElement);
+trElement.html(htmlsTitle);
+tbElement.append(trElement);
 
 // Nội dung
 for (const hoa of listHoa) {
-    var tr2Element = document.createElement('tr');
+    var tr2Element = $('<tr>');
     var htmlsContents = `
         <td>${hoa.id}</td>
         <td><a href="#" title="${hoa.tenHoa}">${hoa.tenHoa}</a></td>
@@ -55,6 +59,6 @@ for (const hoa of listHoa) {
         <td>
             <img src = '${hoa.hinhAnh}' alt = '${hoa.hinhAnh}' />
         </td>`;
-    tr2Element.innerHTML = htmlsContents;
-    tbElement.appendChild(tr2Element);
+    tr2Element.html(htmlsContents);
+    tbElement.append(tr2Element);
 }
