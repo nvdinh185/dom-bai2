@@ -31,6 +31,9 @@ const listHoa = [
     }
 ]
 
+var h3Element = document.querySelector('h3');
+h3Element.innerText = 'Danh sách hoa';
+
 const tbElement = document.querySelector('#tbl');
 
 // Tiêu đề
