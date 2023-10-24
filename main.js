@@ -32,7 +32,6 @@ const listHoa = [
 ]
 
 var h3Element = $('h3');
-
 h3Element.text('Danh sách sản phẩm');
 
 const tbElement = $('#tbl');
