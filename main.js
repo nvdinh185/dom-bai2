@@ -3,31 +3,31 @@ const listHoa = [
         id: 1,
         tenHoa: 'Hoa Phong Lan',
         loaiHoa: 'Khai trương',
-        hinhAnh: 'images/hoa1.jpg'
+        hinhAnh: 'hoa1.jpg'
     },
     {
         id: 2,
         tenHoa: 'Hoa tỷ muội',
         loaiHoa: 'Khai trương',
-        hinhAnh: 'images/hoa2.jpg'
+        hinhAnh: 'hoa2.jpg'
     },
     {
         id: 3,
         tenHoa: 'Hoa Violet',
         loaiHoa: 'Hoa kỷ niệm',
-        hinhAnh: 'images/hoa3.jpg'
+        hinhAnh: 'hoa3.jpg'
     },
     {
         id: 4,
         tenHoa: 'Hoa thủy tiên',
         loaiHoa: 'Hoa tình yêu',
-        hinhAnh: 'images/hoa4.jpg'
+        hinhAnh: 'hoa4.jpg'
     },
     {
         id: 5,
         tenHoa: 'Hoa cẩm chướng',
         loaiHoa: 'Hoa hạnh phúc',
-        hinhAnh: 'images/hoa5.jpg'
+        hinhAnh: 'hoa5.jpg'
     }
 ]
 
@@ -56,7 +56,7 @@ for (const hoa of listHoa) {
         <td><a href="#" title="${hoa.tenHoa}">${hoa.tenHoa}</a></td>
         <td>${hoa.loaiHoa}</td>
         <td>
-            <img src = '${hoa.hinhAnh}' alt = '${hoa.hinhAnh}' />
+            <img src = 'images/${hoa.hinhAnh}' alt = '${hoa.hinhAnh}' />
         </td>`;
     tr2Element.html(htmlsContents);
     tbElement.append(tr2Element);
