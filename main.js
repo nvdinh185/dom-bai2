@@ -36,28 +36,31 @@ h3Element.text('Danh sách sản phẩm');
 
 const tbElement = $('#tbl');
 
-var trElement = $('<tr>');
 // Tiêu đề
-const htmlsTitle = `
-        <th>ID</th>
-        <th>Tên hoa</th>
-        <th>Loại hoa</th>
-        <th>Hình ảnh</th>
+var htmls = `
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Tên hoa</th>
+            <th>Loại hoa</th>
+            <th>Hình ảnh</th>
+        </tr>
+    </thead>
     `;
 
-trElement.html(htmlsTitle);
-tbElement.append(trElement);
-
 // Nội dung
+htmls += '<tbody>';
 for (const hoa of listHoa) {
-    var tr2Element = $('<tr>');
-    var htmlsContents = `
+    htmls += `
+    <tr>
         <td>${hoa.id}</td>
         <td><a href="#" title="${hoa.tenHoa}">${hoa.tenHoa}</a></td>
         <td>${hoa.loaiHoa}</td>
         <td>
             <img src = 'images/${hoa.hinhAnh}' alt = '${hoa.hinhAnh}' />
-        </td>`;
-    tr2Element.html(htmlsContents);
-    tbElement.append(tr2Element);
+        </td>
+    </tr>`;
 }
+htmls += '</tbody>';
+
+tbElement.html(htmls);
