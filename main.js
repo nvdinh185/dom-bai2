@@ -37,7 +37,7 @@ h3Element.innerText = 'Danh sách hoa';
 const tbElement = document.querySelector('#tbl');
 
 // Tiêu đề
-const htmlsTitle = `
+var htmls = `
     <thead>
         <tr>
             <th>ID</th>
@@ -48,12 +48,10 @@ const htmlsTitle = `
     </thead>
     `;
 
-tbElement.innerHTML = htmlsTitle;
-
 // Nội dung
-var htmlsContents = '';
+htmls += '<tbody>';
 for (const hoa of listHoa) {
-    htmlsContents += `
+    htmls += `
     <tr>
         <td>${hoa.id}</td>
         <td><a href="#" title="${hoa.tenHoa}">${hoa.tenHoa}</a></td>
@@ -63,5 +61,6 @@ for (const hoa of listHoa) {
         </td>
     </tr>`;
 }
+htmls += '</tbody>';
 
-tbElement.innerHTML += '<tbody>' + htmlsContents + '</tbody>';
+tbElement.innerHTML = htmls;
