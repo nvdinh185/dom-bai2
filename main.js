@@ -16,18 +16,6 @@ const listHoa = [
         tenHoa: 'Hoa Violet',
         loaiHoa: 'Hoa kỷ niệm',
         hinhAnh: 'hoa3.jpg'
-    },
-    {
-        id: 4,
-        tenHoa: 'Hoa thủy tiên',
-        loaiHoa: 'Hoa tình yêu',
-        hinhAnh: 'hoa4.jpg'
-    },
-    {
-        id: 5,
-        tenHoa: 'Hoa cẩm chướng',
-        loaiHoa: 'Hoa hạnh phúc',
-        hinhAnh: 'hoa5.jpg'
     }
 ]
 
@@ -54,7 +42,7 @@ for (const hoa of listHoa) {
     htmls += `
     <tr>
         <td>${hoa.id}</td>
-        <td><a href="#" title="${hoa.tenHoa}">${hoa.tenHoa}</a></td>
+        <td>${hoa.tenHoa}</td>
         <td>${hoa.loaiHoa}</td>
         <td>
             <img src = 'images/${hoa.hinhAnh}' alt = '${hoa.hinhAnh}' />
