@@ -40,15 +40,17 @@ var htmls = `
 htmls += '<tbody>';
 for (const hoa of listHoa) {
     htmls += `
-    <tr>
-        <td>${hoa.id}</td>
-        <td>${hoa.tenHoa}</td>
-        <td>${hoa.loaiHoa}</td>
-        <td>
-            <img src='images/${hoa.hinhAnh}' alt='${hoa.hinhAnh}' />
-        </td>
-    </tr>`;
+        <tr>
+            <td>${hoa.id}</td>
+            <td>${hoa.tenHoa}</td>
+            <td>${hoa.loaiHoa}</td>
+            <td>
+                <img src='images/${hoa.hinhAnh}' alt='${hoa.hinhAnh}' />
+            </td>
+        </tr>
+    `;
 }
 htmls += '</tbody>';
 
+console.log(htmls);
 tbElement.html(htmls);
